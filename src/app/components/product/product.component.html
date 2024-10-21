@@ -1,0 +1,33 @@
+<div class="product-container">
+    <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
+  
+    <div *ngFor="let product of products" class="product-card">
+      <h3>{{ product.shortDescription }}</h3>
+  
+      <div *ngIf="product.images && product.images.length > 0">
+        <!-- Display a single image if only one is available -->
+        <img
+          *ngIf="product.images.length === 1"
+          [src]="getImageUrl(product.images[0].src)"
+          [alt]="product.shortDescription"
+          class="single-product-image"
+        />
+  
+        <!-- Display a carousel if multiple images are available -->
+        <ng-container *ngIf="product.images.length > 1">
+          <ngb-carousel>
+            <ng-template ngbSlide *ngFor="let image of product.images">
+              <img
+                [src]="getImageUrl(image.src)"
+                [alt]="product.shortDescription"
+                class="carousel-product-image"
+              />
+            </ng-template>
+          </ngb-carousel>
+        </ng-container>
+      </div>
+      
+      <p>{{ product.price | currency }}</p>
+    </div>
+  </div>
+  

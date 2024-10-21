@@ -1,0 +1,27 @@
+<!-- search.component.html -->
+<div class="search-bar">
+    <input
+      type="text"
+      [(ngModel)]="searchTerm"
+      placeholder="Search for products..."
+    />
+    <button (click)="searchProducts()">Search</button>
+  </div>
+  
+  <div *ngIf="isLoading">Loading...</div>
+  
+  <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
+  
+  <div *ngIf="!isLoading && products.length">
+    <div *ngFor="let product of products" class="product-card">
+      <img [src]="'https://m.media-amazon.com/images/G/01/Shopbop/p' + product.colors[0].images[0].src" alt="{{ product.shortDescription }}" />
+      <h3>{{ product.shortDescription }}</h3>
+      <p>{{ product.designerName }}</p>
+      <p>{{ product.retailPrice.price }}</p>
+    </div>
+  </div>
+  
+  <div *ngIf="!isLoading && !products.length && !errorMessage">
+    No products found.
+  </div>
+  

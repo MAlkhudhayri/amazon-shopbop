@@ -1,0 +1,18 @@
+<!-- src/app/components/category-list/category-list.component.html -->
+<div *ngIf="isLoading">Loading categories...</div>
+<div *ngIf="errorMessage">{{ errorMessage }}</div>
+<ul *ngIf="!isLoading && !errorMessage">
+  <li *ngFor="let category of categories">
+    <h3>{{ category.name }}</h3>
+    <ul *ngIf="category.children">
+      <li *ngFor="let child of category.children">
+        {{ child.name }}
+        <ul *ngIf="child.children">
+          <li *ngFor="let subChild of child.children">
+            {{ subChild.name }}
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>

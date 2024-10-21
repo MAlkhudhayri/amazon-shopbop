@@ -1,0 +1,45 @@
+.or-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 2rem;
+    background-color: var(--peach-100); /* Use the appropriate color variable */
+    margin: 2rem 0;
+    text-align: center;
+  }
+  
+  .images-container {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 800px;
+    margin-bottom: 1rem;
+  }
+  
+  .image-left,
+  .image-right {
+    width: 45%; /* Adjust to fit the images side by side */
+    border: 2px solid var(--green-200); /* Example border styling */
+  }
+  
+  .center-text p {
+    margin: 0.5rem 0;
+    font-size: 1.2rem;
+  }
+  
+  .start-ranking-button {
+    padding: 0.5rem 1.5rem;
+    background-color: var(--green-200);
+    color: var(--white);
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+  }
+  
+  .start-ranking-button:hover {
+    background-color: var(--accessible-sb-orange);
+  }
+  

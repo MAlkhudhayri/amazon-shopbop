@@ -1,0 +1,35 @@
+.promotions-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    background-color: #f9f9f9;
+    border-top: 1px solid #eaeaea;
+    border-bottom: 1px solid #eaeaea;
+  }
+  
+  .promotion {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    width: 45%;
+  }
+  
+  .promo-logo {
+    width: 50px;
+    height: auto;
+    margin-right: 1rem;
+  }
+  
+  .promo-text p {
+    margin: 0;
+    font-weight: bold;
+  }
+  
+  .promo-link {
+    color: red;
+    text-decoration: none;
+  }
+  

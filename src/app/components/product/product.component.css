@@ -1,0 +1,25 @@
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .product-card {
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 5px;
+    width: 250px;
+    text-align: center;
+  }
+  
+  .single-product-image {
+    width: 100%;
+    height: auto;
+  }
+  
+  .carousel-product-image {
+    width: 100%;
+    height: auto;
+  }
+  

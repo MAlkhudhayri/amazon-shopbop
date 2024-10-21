@@ -1,0 +1,11 @@
+.footer-container {
+  text-align: center;
+  padding: 1rem;
+  background-color: #f8f8f8;
+  border-top: 1px solid #eaeaea;
+  color: #666;
+}
+
+.footer-container .heart {
+  color: red;
+}

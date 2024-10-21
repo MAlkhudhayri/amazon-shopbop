@@ -1,0 +1,58 @@
+/* Global Utility Bar */
+.global-utility-bar {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 2rem;
+    background-color: #f8f8f8;
+    font-size: 0.9rem;
+}
+
+.utility-options {
+    display: flex;
+    gap: 1rem;
+}
+
+.utility-options .dropdown {
+    cursor: pointer;
+}
+
+.prime-banner a {
+    text-decoration: none;
+    color: blue;
+    font-weight: bold;
+}
+
+/* Main Navigation Bar */
+.main-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #fff;
+    border-bottom: 1px solid #eaeaea;
+}
+
+.left-links, .right-links {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.logo a {
+    font-size: 2rem;
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+}
+
+.right-links input.search-bar {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Icons */
+.right-links i {
+    font-size: 1.2rem;
+    cursor: pointer;
+}

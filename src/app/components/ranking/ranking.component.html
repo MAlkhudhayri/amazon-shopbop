@@ -1,0 +1,26 @@
+<div class="ranking-container mat-elevation-z8">
+  <app-category-list></app-category-list>
+  
+  <h2>Which Product Do You Prefer?</h2>
+  
+  <div class="products">
+    <!-- Error message if present -->
+    <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
+    
+    <!-- Conditionally display products if available -->
+    <div *ngIf="products && products.length > 0">
+      <app-product *ngFor="let product of products" [product]="product"></app-product>
+    </div>
+    
+    <!-- Display fallback or predefined products if no data from API -->
+    <div *ngIf="!products || products.length === 0">
+      <div *ngFor="let product of displayedProducts" class="product-card">
+        <mat-card (click)="selectProduct(product)" class="clickable-card">
+          <img mat-card-image [src]="product.image" alt="Product image">
+          <mat-card-title>{{ product.name }}</mat-card-title>
+          <mat-card-subtitle>{{ product.price | currency }}</mat-card-subtitle>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+</div>
